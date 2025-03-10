@@ -1,0 +1,28 @@
+@media screen and (max-aspect-ratio: 1/1), (max-width: 450px) {
+    .slider ,.music__info-block--mini-description{
+        display: none;
+    }
+    .music__info-block{
+        margin-left: 0;
+        width: 100%;
+    }
+    .music__info {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .music__info-block--name{
+        position:static;
+    }
+    .music__container {
+        position: relative;
+        width: var(--container-width);
+        left:50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    .music__info-block--description{
+        margin-bottom:calc(var(--index)*.6);
+        line-height: 120%;
+    }
+}

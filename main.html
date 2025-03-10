@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptiv.css">
+
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="libs/gsap/ScrollSmoother.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="Logo" class="header__logo-image">
+            </div>
+            <div class="header__volume">
+                <h6 class="header__volume-text">VOLUME</h6>
+                <img src="img/volume-bord.svg" alt="volume" class="header__volume-border">
+                <div class="header__volume-popis"></div>
+            </div>
+        </div>
+    </header>
+<div class="wrapper">
+    <div class="content">
+        <section class="main">
+            <video  loop autoplay muted id="video">
+                <source src="img/video.mp4" type="video/mp4">
+                <source src="img/video.webm" type="video/webm">
+                Ваш браузер не поддерживает встроенные видео :(
+            </video>
+            <img src="img/smallPhoro.svg" alt="photoTravis" class="smallPhoro">
+            <div class="main__title">TRAVIS SCOTT.</div>
+            <div class="fly-text">
+                <div class="fly-text__item fly-text__item--first">Over the course of his career, Scott has become a globallyrecognized artist and pop culture figure.</div>
+                <div class="fly-text__group">
+                    <div class="fly-text__item fly-text__item--second">Jacques Bermon Webster II known professionally as Travis Scott</div>
+                    <div class="fly-text__item fly-text__item--third">American rapper, singer, songwriter, and record producer</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-article"></div>
+
+        <section class="section__info">
+            <div class="section__info-text">Travis Scott is an American rapper and producer whose unique musical compositions and captivating live performances have won over millions of fans worldwide. His music is a unique blend of hip-hop, trap, and psychedelic elements, creating an atmosphere that grabs you from the first seconds. Each of his albums becomes an event, causing a wave of emotions among listeners.</div>
+            <div class="rounded-div-wrap"><div class="rounded-div"></div></div>
+        </section>
+
+        <section class="section__transition">
+            <div class="music__container">
+                <div class="music__info">
+                    <img src="img/album art/albom1.jpg" alt="album art" class="music__info-img">
+                    <div class="music__info-block">
+                        <div class="music__info-block--date">28 jul 2023</div>
+                        <div class="music__info-block--name">utopia</div>
+                        <div class="music__info-block--description">"Utopia" by Travis Scott is one of the most highly anticipated albums in the music world. Following the phenomenal success of "Astroworld," Scott's latest project promises to take listeners on a journey into an idealized world. Travis has described "Utopia" as an exploration of a brighter, more positive vision of the future, a stark contrast to the chaotic and dystopian themes of his previous work.</div>
+                        <div class="music__info-block--mini-description">
+                            <div class="mini-description__items">
+                                <div class="mini-description-item">The album's concept revolves around the idea of creating a perfect society through music, embracing themes of growth, unity, and happiness</div>
+                                <div class="mini-description-item mini-description__item-small">Travis has been tight-lipped about the specific details</div>
+                            </div>
+                            <div class="mini-description-item">Whether you're a long-time fan or a new listener, "Utopia" is set to be an unforgettable experience.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="winding">
+                    <div class="winding-name">TIL FURTHER NOTICE</div>
+                    <div class="winding__block">
+                        <audio id="audio" src="audio/Utopia.mp3"></audio>
+                        <input type="range" id="seekBar" value="0" step="1">
+                        <div class="player">
+                            <span id="currentTime">0:00</span>
+                            <button class="playPause play"><img src="img/play.png" alt="play"></button>
+                            <button class="playPause pause" style="opacity:0;"><img src="img/pause.png" alt="pause"></button>
+                            <span id="duration">0:00</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <aside class="slider">
+                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
+            </aside>
+        </section>
+    </div>
+</div>
+
+
+<script src="js/main.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/albom-audio.js"></script>
+</body>
+</html>
