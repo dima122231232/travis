@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const durationEl = document.getElementById("duration");
 
     const tracks = [
-        '../audio/Utopia.mp3',
-        '../audio/HIGHEST IN THE ROOM.mp3',
-        '../audio/Travis Scott - WAKE UP.mp3',
-        '../audio/Huncho Jack.mp3',
-        '../audio/goosebumps (feat. Kendrick Lamar).mp3',
-        '../audio/Mamacita.mp3',
-        '../audio/The Prayer.mp3',
-        '../audio/Meadow Creek.mp3',
+        '/audio/Utopia.mp3',
+        '/audio/HIGHEST IN THE ROOM.mp3',
+        '/audio/Travis Scott - WAKE UP.mp3',
+        '/audio/Huncho Jack.mp3',
+        '/audio/goosebumps (feat. Kendrick Lamar).mp3',
+        '/audio/Mamacita.mp3',
+        '/audio/The Prayer.mp3',
+        '/audio/Meadow Creek.mp3',
     ];
 
     let currentTrackIndex = 0;
@@ -87,19 +87,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-   playPauseBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        if (audio.src === "") {
-            audio.src = tracks[currentTrackIndex]; // Убедимся, что трек загружен
-            audio.load();
-        }
-        const isPaused = audio.paused;
-        audio[isPaused ? "play" : "pause"]().catch(error => console.error("Ошибка воспроизведения:", error));
-        
-        gsap.to(".play", { opacity: isPaused ? 0 : 1, duration: 0.1 });
-        gsap.to(".pause", { opacity: isPaused ? 1 : 0, duration: 0.1 });
+    playPauseBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const isPaused = audio.paused;
+            audio[isPaused ? 'play' : 'pause']();
+            gsap.to(".play", { opacity: isPaused ? 0 : 1, duration: 0.1 });
+            gsap.to(".pause", { opacity: isPaused ? 1 : 0, duration: 0.1 });
+        });
     });
-});
 
     albumCovers.forEach((cover, index) => {
         cover.addEventListener("click", () => loadTrack(index));
