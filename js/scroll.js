@@ -1,4 +1,4 @@
-if (window.matchMedia('(pointer: fine)').matches) {
+if (!window.matchMedia('(max-aspect-ratio: 1/1), (max-width: 780px)').matches){
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
     ScrollSmoother.create({

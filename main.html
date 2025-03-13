@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>travis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no, apple-mobile-web-app-capable=yes">
+    <meta name="description" content="Fan site of Travis Scott with some of his songs">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="img/album art/albom1.jpg">
+
+    <title>TRAVIS SCOTT</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptiv.css">
 
@@ -20,7 +24,7 @@
                 <img src="img/logo.svg" alt="Logo" class="header__logo-image">
             </div>
             <div class="header__volume">
-                <h6 class="header__volume-text">VOLUME</h6>
+                <h6 class="header__volume-text">PLAY</h6>
                 <img src="img/volume-bord.svg" alt="volume" class="header__volume-border">
                 <div class="header__volume-popis"></div>
             </div>
@@ -55,45 +59,62 @@
         <section class="section__transition">
             <div class="music__container">
                 <div class="music__info">
-                    <img src="img/album art/albom1.jpg" alt="album art" class="music__info-img">
+                    <div class="music__img-block">
+                    <img src="img/album art/albom1.jpg" alt="album art" class="music__info-img" style="transform: translateY(-1px);height: 101%; opacity: 1;">
+                    <img src="img/album art/albom2.jpg" alt="album art" class="music__info-img">
+                    <img src="img/album art/albom3.jpg" alt="album art" class="music__info-img">
+                    <img src="img/album art/albom4.jpg" alt="album art" class="music__info-img">
+                    <img src="img/album art/albom5.jpg" alt="album art" class="music__info-img">
+                    <img src="img/album art/albom6.jpg" alt="album art" class="music__info-img">
+                    <img src="img/album art/albom7.jpg" alt="album art" class="music__info-img">
+                    <img src="img/album art/albom8.jpg" alt="album art" class="music__info-img">
+                </div>
                     <div class="music__info-block">
                         <div class="music__info-block--date">28 jul 2023</div>
-                        <div class="music__info-block--name">utopia</div>
-                        <div class="music__info-block--description">"Utopia" by Travis Scott is one of the most highly anticipated albums in the music world. Following the phenomenal success of "Astroworld," Scott's latest project promises to take listeners on a journey into an idealized world. Travis has described "Utopia" as an exploration of a brighter, more positive vision of the future, a stark contrast to the chaotic and dystopian themes of his previous work.</div>
-                        <div class="music__info-block--mini-description">
+                        <div class="music__info-revers">
+                            <div class="music__info-block--description">"Utopia" by Travis Scott is one of the most highly anticipated albums in the music world. Following the phenomenal success of "Astroworld," Scott's latest project promises to take listeners on a journey into an idealized world. Travis has described "Utopia" as an exploration of a brighter, more positive vision of the future, a stark contrast to the chaotic and dystopian themes of his previous work.</div>
+                            <div class="music__info-block--mini-description">
                             <div class="mini-description__items">
-                                <div class="mini-description-item">The album's concept revolves around the idea of creating a perfect society through music, embracing themes of growth, unity, and happiness</div>
-                                <div class="mini-description-item mini-description__item-small">Travis has been tight-lipped about the specific details</div>
+                                <div class="mini-description-item mini-description-first">The album's concept revolves around the idea of creating a perfect society through music, embracing themes of growth, unity, and happiness</div>
+                                <div class="mini-description-item  mini-description-two">Travis has been tight-lipped about the specific details</div>
                             </div>
-                            <div class="mini-description-item">Whether you're a long-time fan or a new listener, "Utopia" is set to be an unforgettable experience.</div>
+                            <div class="mini-description-item mini-description-three">Whether you're a long-time fan or a new listener, "Utopia" is set to be an unforgettable experience.</div>
+                            </div>
+                            <div class="music__info-block--name">utopia</div>
                         </div>
                     </div>
                 </div>
                 <div class="winding">
                     <div class="winding-name">TIL FURTHER NOTICE</div>
                     <div class="winding__block">
-                        <audio id="audio" src="audio/Utopia.mp3"></audio>
+                        <audio class="albom-musik1" src="../audio/Utopia.mp3"></audio>
                         <input type="range" id="seekBar" value="0" step="1">
                         <div class="player">
                             <span id="currentTime">0:00</span>
-                            <button class="playPause play"><img src="img/play.png" alt="play"></button>
-                            <button class="playPause pause" style="opacity:0;"><img src="img/pause.png" alt="pause"></button>
-                            <span id="duration">0:00</span>
+                            <div class="control-panel">
+                                <button class="control__arrow"><img src="img/arrow-per.png" alt="control__arrow" style="transform: rotate(180deg);"></button>
+                                <button class="playPause play"><img src="img/play.png" alt="play"></button>
+                                <button class="playPause pause" style="opacity:0;"><img src="img/pause.png" alt="pause"></button>
+                                <button class="control__arrow"><img src="img/arrow-per.png" alt="control__arrow"></button>
+                            </div>
+                            <span id="duration">5:14</span>
                         </div>
 
                     </div>
                 </div>
             </div>
-
+            
             <aside class="slider">
-                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
-                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
-                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
-                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
-                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
-                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
-                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
-                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom1.jpg" alt="albom-photo" class="slider__albom-photo" style="opacity:1;">
+                <img src="img/album art/albom2.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom3.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom4.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom5.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom6.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom7.jpg" alt="albom-photo" class="slider__albom-photo">
+                <img src="img/album art/albom8.jpg" alt="albom-photo" class="slider__albom-photo">
+
+                <div class="slider-pick"></div>
             </aside>
         </section>
     </div>
@@ -104,5 +125,6 @@
 <script src="js/scroll.js"></script>
 <script src="js/audio.js"></script>
 <script src="js/albom-audio.js"></script>
+<script src="js/slider.js"></script>
 </body>
 </html>

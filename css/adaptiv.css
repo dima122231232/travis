@@ -11,12 +11,20 @@
         flex-direction: column-reverse;
         text-align: center;
     }
+    .music__info-revers{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        height: 170px;
+    }
+    
     .music__info-block--name{
+        width: 100%;
         position:static;
     }
     .music__container {
         position: relative;
-        width: var(--container-width);
+        /* width: var(--container-width); */
         left:50%;
         top: 0;
         transform: translateX(-50%);
@@ -24,5 +32,24 @@
     .music__info-block--description{
         margin-bottom:calc(var(--index)*.6);
         line-height: 120%;
+        width: 100vw;
     }
+    .winding__block,.winding-name{
+        width: var(--container-width);
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+    .music__img-block{
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .fly-text {bottom:35vw;}
+    .main__title{bottom: 0;}
+    .section__info{
+        min-height: 35vh;
+    }
+    .main{position: fixed;}
+    .control-panel{width:calc(var(--container-width)*.5)}
 }
