@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     const audio = document.querySelector('.albom-musik1');
     const seekBar = document.getElementById("seekBar");
     const playPauseBtns = document.querySelectorAll(".playPause");
