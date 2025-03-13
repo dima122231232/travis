@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const durationEl = document.getElementById("duration");
 
     const tracks = [
-        '/audio/Utopia.mp3',
-        '/audio/HIGHEST IN THE ROOM.mp3',
-        '/audio/Travis Scott - WAKE UP.mp3',
-        '/audio/Huncho Jack.mp3',
-        '/audio/goosebumps (feat. Kendrick Lamar).mp3',
-        '/audio/Mamacita.mp3',
-        '/audio/The Prayer.mp3',
-        '/audio/Meadow Creek.mp3',
+        'audio/Utopia.mp3',
+        'audio/HIGHEST IN THE ROOM.mp3',
+        'audio/Travis Scott - WAKE UP.mp3',
+        'audio/Huncho Jack.mp3',
+        'audio/goosebumps (feat. Kendrick Lamar).mp3',
+        'audio/Mamacita.mp3',
+        'audio/The Prayer.mp3',
+        'audio/Meadow Creek.mp3',
     ];
 
     let currentTrackIndex = 0;
