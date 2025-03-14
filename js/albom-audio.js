@@ -86,7 +86,8 @@ window.addEventListener("load", () => {
             }
         });
     }
-
+    audio.src = tracks[0];
+    audio.load();
     playPauseBtns.forEach(btn => {
         btn.addEventListener("click", () => {
             const isPaused = audio.paused;

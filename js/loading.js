@@ -64,7 +64,7 @@ function Start(){
     gsap.fromTo(".header", {y:"-100%"},{y:"0%",delay:.75,duration:1});
     gsap.to(".smallPhoro",{opacity:1,delay:.75,duration:1});
 
-  document.getElementById('video').play();
+//   document.getElementById('video').play();
 }
 
 
