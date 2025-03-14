@@ -53,3 +53,13 @@
     .main{position: fixed;}
     .control-panel{width:calc(var(--container-width)*.5)}
 }
+@media (max-width: 450px) {
+    .main__title{
+        font-size: 44vw;
+        line-height: 75%;
+        white-space:wrap;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        bottom: 10%;
+    }
+    .fly-text__item{display: none;}
+}

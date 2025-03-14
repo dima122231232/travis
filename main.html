@@ -30,14 +30,27 @@
             </div>
         </div>
     </header>
+
+    <div class="loading">
+        <img src="img/thumbnail11.png" alt="thumbnail image" class="loading-thumbnail-img">
+        <img src="img/thumbnail33.png" alt="thumbnail image" class="loading-thumbnail-img">
+        <video  loop muted id="video">
+            <source src="img/video.mp4" type="video/mp4">
+            <source src="img/video.webm" type="video/webm">
+            Ваш браузер не поддерживает встроенные видео :(
+        </video>
+        <div class="loading-text" onclick="Start()"><div class="ld_block-text"><div class="ld_div-text" style="opacity:.2;">This website contains </div></div><div class="ld_block-text"><div class="ld_div-text">bright flashing lights that may</div></div><div class="ld_block-text"><div class="ld_div-text">trigger an epileptic seizure. </div></div> <div class="ld_block-text" style="margin-top:8vh;"><div class="ld_div-text" style="opacity: .2;">GO</div></div></div>
+        <div class="loading__block-progres"><div class="loading__div-progres">0%</div></div>
+    </div>
+
 <div class="wrapper">
     <div class="content">
         <section class="main">
-            <video  loop autoplay muted id="video">
+            <!-- <video  loop muted id="video">
                 <source src="img/video.mp4" type="video/mp4">
                 <source src="img/video.webm" type="video/webm">
                 Ваш браузер не поддерживает встроенные видео :(
-            </video>
+            </video> -->
             <img src="img/smallPhoro.svg" alt="photoTravis" class="smallPhoro">
             <div class="main__title">TRAVIS SCOTT.</div>
             <div class="fly-text">
@@ -120,11 +133,11 @@
     </div>
 </div>
 
-
+<script src="js/loading.js"></script>
 <script src="js/main.js"></script>
 <script src="js/scroll.js"></script>
-<script src="js/audio.js"></script>
 <script src="js/albom-audio.js"></script>
 <script src="js/slider.js"></script>
+<script src="js/audio.js"></script>
 </body>
 </html>

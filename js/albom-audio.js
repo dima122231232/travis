@@ -122,7 +122,32 @@ window.addEventListener("load", () => {
 
     arrows[0].addEventListener("click", () => loadTrack(currentTrackIndex - 1)); // Назад
     arrows[1].addEventListener("click", () => loadTrack(currentTrackIndex + 1)); // Вперед
+    // let isFirstClick = true;
 
+    // document.querySelector('.header__volume').addEventListener('click', function () {
+    //     if (isFirstClick) {
+    //         loadTrack(currentTrackIndex);
+    //         gsap.to('.header__volume-popis', { 
+    //             width: '0%', 
+    //             duration: 0.5, 
+    //             ease: customEase 
+    //         });
+    //     } else {
+    //         gsap.to('.header__volume-popis', { 
+    //             width: '150%',  
+    //             duration: 0.5, 
+    //             ease: customEase 
+    //         });
+    //     }
+    
+    //     const isPaused = audio.paused;
+    //     audio[isPaused ? 'play' : 'pause']();
+    //     gsap.to(".play", { opacity: isPaused ? 0 : 1, duration: 0.1 });
+    //     gsap.to(".pause", { opacity: isPaused ? 1 : 0, duration: 0.1 });
+    
+    //     isFirstClick = !isFirstClick;
+    // });
+    
     function formatTime(seconds) {
         const min = Math.floor(seconds / 60);
         const sec = Math.floor(seconds % 60);
