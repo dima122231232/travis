@@ -13,6 +13,7 @@ window.addEventListener("load", () => {
 
     gsap.fromTo(".section__info-text span",{opacity: .1},{opacity: 1,stagger:1,scrollTrigger: {trigger: ".section__info", start: "top bottom",endTrigger: ".section__transition",end:"center bottom", scrub: true}});
     gsap.fromTo("#video, #video-fake",{opacity:1},{opacity:.1,scrollTrigger: page1});
+    gsap.fromTo("#video, #video-fake",{opacity:.1},{opacity:0,scrollTrigger: {trigger: ".section__transition",start: "top-=10vh top",end: "top-=10vh top",scrub: true}});
     gsap.fromTo("#video , #video-fake",{width:"100%"},{height:"100%",scrollTrigger: page1});
     
     gsap.set("#video-fake",{opacity:0})
