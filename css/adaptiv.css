@@ -66,4 +66,17 @@
         bottom: 10%;
     }
     .fly-text__item{display: none;}
+    .music__img-block{
+        width: 85vw;
+        height: 85vw;
+    }
+    .winding__block,.winding-name{
+        width: 85vw;
+    }
+    .music__info-block--description {
+        font-size: clamp(14px, var(--normal__albom-text), 32px);
+    }
+    .section__info-text{
+        width:90vw;
+    }
 }

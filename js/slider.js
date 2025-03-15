@@ -65,7 +65,7 @@ window.addEventListener("load", () => {
     const sliderImages = document.querySelectorAll('.slider__albom-photo');
     const musicImages = document.querySelectorAll('.music__info-img');
 
-    let currentIndex = 0; // Текущий индекс активного элемента
+    let currentIndex = 0; 
 
     function handleMediaQueryChange(e) {
         if (e.matches) {
