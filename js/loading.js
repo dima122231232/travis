@@ -5,15 +5,15 @@ const page1 = {trigger: ".main",start: "top top",end: "bottom top",scrub: true};
 
 window.onload = function () {
     gsap.timeline()
-        // .fromTo(".loading__div-progres", { x: "0%" }, { x: "-100%", duration: 1, ease: "power4.in" })
-        // .to(".loading__block-progres", {  top: "calc(50% - calc(var(--index)*2))",right:"calc(var(--index)*-2.3)", duration: 0 })
-        // .call(() => { document.querySelector(".loading__div-progres").textContent = "66%"; })
-        // .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
-        // .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" })
-        // .to(".loading__block-progres", { top: "calc(100% - calc(var(--index)*4))",right:"calc(var(--index)*-3.6)", duration: 0 })
-        // .call(() => { document.querySelector(".loading__div-progres").textContent = "100%";})
-        // .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
-        // .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" })
+        .fromTo(".loading__div-progres", { x: "0%" }, { x: "-100%", duration: 1, ease: "power4.in" })
+        .to(".loading__block-progres", {  top: "calc(50% - calc(var(--index)*2))",right:"calc(var(--index)*-2.3)", duration: 0 })
+        .call(() => { document.querySelector(".loading__div-progres").textContent = "66%"; })
+        .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
+        .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" })
+        .to(".loading__block-progres", { top: "calc(100% - calc(var(--index)*4))",right:"calc(var(--index)*-3.6)", duration: 0 })
+        .call(() => { document.querySelector(".loading__div-progres").textContent = "100%";})
+        .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
+        .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" })
         .add(() => {
             document.querySelectorAll('.ld_div-text').forEach((el, idx) => {
                 gsap.fromTo(el, { y: "-100%" }, { y: "0%", duration: 0.5,ease:customEase, delay: idx * 0.1 });

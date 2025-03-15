@@ -74,7 +74,7 @@
         width: 85vw;
     }
     .music__info-block--description {
-        font-size: clamp(14px, var(--normal__albom-text), 32px);
+        font-size: clamp(15px, var(--normal__albom-text), 32px);
     }
     .section__info-text{
         width:90vw;
