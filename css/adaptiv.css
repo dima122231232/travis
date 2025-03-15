@@ -52,6 +52,10 @@
     }
     .main{position: fixed;}
     .control-panel{width:calc(var(--container-width)*.5)}
+    .smallPhoro{
+        bottom: 75vw;
+        width:50vw;
+    }
 }
 @media (max-width: 450px) {
     .main__title{

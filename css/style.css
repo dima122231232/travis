@@ -71,11 +71,12 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
 }
 .loading-thumbnail-img{
     position: absolute;
-    width: 0%;
+    width: 100%;
     height: 0%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    object-fit: cover;
 }
 /*HEADER--------------------------------*/
 .header {
@@ -138,6 +139,17 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
       object-fit: cover;
       object-position: center;
 }
+#video-fake{
+    position: absolute;
+    height: 82%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+      object-fit: cover;
+      object-position: center;
+    opacity: 0;
+}
 .main__title{
     font-size:22vw;
     white-space: nowrap;
@@ -164,13 +176,12 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
     width: calc(var(--index)*11);
     margin: calc(var(--index)*2) 0 0 calc(var(--index)*4);
     mix-blend-mode: difference; 
-    opacity: 0;
 }
 .fly-text__group{display: flex;}
 .smallPhoro{
     position: absolute;
     bottom: 10vw;
-    right:6%;
+    right:6vw;
     width:20vw;
     mix-blend-mode: difference;
     transform: rotate(3deg);
@@ -241,6 +252,7 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
     top:50%;
     transform: translateY(-50%);
     z-index: 2;
+    display: none;
 }
 .music__info {
     display: flex;
@@ -416,6 +428,7 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
     top:50%;
     transform: translateY(-50%);
     left:calc(((100vw - 10vh) - (clamp(calc(var(--index)*10) ,calc(var(--index)*24),calc(var(--index)*38)) + calc(var(--index)*3.3) +  calc(var(--index)* 14) + calc(var(--index)* 2.7))) / 2);
+    display: none;
 }
 .slider__albom-photo {
     height:10vh;
