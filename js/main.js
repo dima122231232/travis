@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     gsap.fromTo("#video, #video-fake",{opacity:1},{opacity:.1,scrollTrigger: page1});
     gsap.fromTo("#video, #video-fake",{opacity:.1},{opacity:0,scrollTrigger: {trigger: ".section__transition",start: "top-=10vh top",end: "top-=10vh top",scrub: true}});
     gsap.fromTo("#video , #video-fake",{width:"100%"},{height:"100%",scrollTrigger: page1});
-    
+    gsap.fromTo(".section__info-text span",{color:"#fff"},{color:"#E6508F",scrollTrigger: {trigger: ".section__info", start: "center bottom",endTrigger: ".section__transition",end:"center bottom", scrub: true}});
     gsap.set("#video-fake",{opacity:0})
 
     // if(!window.matchMedia('(max-aspect-ratio: 1/1), (max-width: 780px)').matches){}
@@ -29,7 +29,6 @@ window.addEventListener("load", () => {
         gsap.fromTo('.main',{y:'0vh'},{y:'270vh',ease:"none",scrollTrigger:{trigger: ".main",start: "top top",endTrigger: ".section__info",end: "bottom top",scrub: true}})
         gsap.to(".smallPhoro", { x: "-26vw",y:"-8vh", width: "36vw",rotate:0,ease:customEase, scrollTrigger: page1 });
         gsap.fromTo('.rounded-div-wrap',{height:"50vh"},{height:"5vh",ease:"none",scrollTrigger:{trigger: ".section__transition",start: "top bottom",end: "bottom bottom",scrub: true,}})
-        gsap.fromTo(".section__info-text span",{color:"#fff"},{color:"#E6508F",scrollTrigger: {trigger: ".section__info", start: "center bottom",endTrigger: ".section__transition",end:"center bottom", scrub: true}});
     }
     
 });

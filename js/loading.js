@@ -10,7 +10,7 @@ window.onload = function () {
         .call(() => { document.querySelector(".loading__div-progres").textContent = "66%"; })
         .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
         .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" })
-        .to(".loading__block-progres", { top: "calc(100% - calc(var(--index)*4))",right:"calc(var(--index)*-3.6)", duration: 0 })
+        .to(".loading__block-progres", { top: "calc(100% - calc(var(--index)*4) - env(safe-area-inset-bottom))",right:"calc(var(--index)*-3.6)", duration: 0 })
         .call(() => { document.querySelector(".loading__div-progres").textContent = "100%";})
         .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
         .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" })

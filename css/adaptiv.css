@@ -47,9 +47,9 @@
     }
     .fly-text {bottom:35vw;}
     .main__title{bottom: 0;}
-    .section__info{
-        min-height: 35vh;
-    }
+    /* .section__info{
+        min-height: 70vh;
+    } */
     .main{position: fixed;}
     .control-panel{width:calc(var(--container-width)*.5)}
     .smallPhoro{
@@ -78,5 +78,11 @@
     }
     .section__info-text{
         width:90vw;
+    }
+    .music__info-block--date {
+        padding: calc(var(--index)* 1) 0 calc(var(--index)* 1.45);
+    }
+    .winding-name {
+        margin: calc(var(--index)* 1.5) 0 calc(var(--index)* .2);
     }
 }
