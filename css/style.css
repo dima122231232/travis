@@ -10,7 +10,7 @@
 ::-webkit-scrollbar {width: 0;height: 0;}
 body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;overflow: hidden;}
 :root{
-    --index:calc(1vw + 1vh);
+    --index:calc(1dvw + 1dvh);
     --small__albom-text:calc(var(--index)*.63);/*19*/
     --small-text:calc(var(--index)*.66);/*20*/
     --normal__albom-text:calc(var(--index)*.73);/*22*/
@@ -252,7 +252,7 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
     top:50%;
     transform: translateY(-50%);
     z-index: 2;
-    display: none;
+    /* display: none; */
 }
 .music__info {
     display: flex;
@@ -428,7 +428,7 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
     top:50%;
     transform: translateY(-50%);
     left:calc(((100vw - 10vh) - (clamp(calc(var(--index)*10) ,calc(var(--index)*24),calc(var(--index)*38)) + calc(var(--index)*3.3) +  calc(var(--index)* 14) + calc(var(--index)* 2.7))) / 2);
-    display: none;
+    /* display: none; */
 }
 .slider__albom-photo {
     height:10vh;
