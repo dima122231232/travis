@@ -86,4 +86,10 @@
     .section__info{
         min-height: 100vh;
     }
+    #video-fake{
+        height: 100dvh;
+    }
+    .loading__block-progres {
+        top: calc(25% - calc(var(--index)*-2));
+    }
 }

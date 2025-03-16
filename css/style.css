@@ -159,7 +159,7 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
     bottom: -7vw;
     font-weight: 400;
     clip-path: polygon(0 0, 100% 0, 100% 76%, 0% 76%);   
-    color: #343434;
+    /* color: #343434; */
 }
 .main__title span{
     position: relative;

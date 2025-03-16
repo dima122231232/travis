@@ -3,9 +3,6 @@ const main__title = document.querySelector(".main__title");
 
 const page1 = {trigger: ".main",start: "top top",end: "bottom top",scrub: true};
 
-document.documentElement.style.setProperty('--safe-area-bottom', 
-    (window.innerHeight - document.documentElement.clientHeight) + 'px'
-);
 window.onload = function () {
     const tl = gsap.timeline();
 
@@ -18,7 +15,7 @@ window.onload = function () {
       tl.to(".loading__block-progres", { top: "calc(100% - calc(var(--index)*4)", right: "calc(var(--index)*-3.6)", duration: 0 });
     }
     else{
-        tl.to(".loading__block-progres", { top: "calc(100% - calc(var(--index)*4) - var(--safe-area-bottom))", right: "calc(var(--index)*-3.6)", duration: 0 });
+        tl.to(".loading__block-progres", { top: "calc(75% - calc(var(--index)*4) ", right: "calc(var(--index)*-3.6)", duration: 0 });
     }
     tl.call(() => { document.querySelector(".loading__div-progres").textContent = "100%"; })
       .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
@@ -32,7 +29,6 @@ window.onload = function () {
         gsap.set(".loading__div-progres", { x: "0%" });
 };
 function Start(){
-
     document.querySelector('.loading').style.pointerEvents = "none";
     document.querySelector('.loading').style.zIndex = -1;
     document.body.style.overflow = "auto";
@@ -59,7 +55,7 @@ function Start(){
         gsap.timeline()
         // .to(".loading-thumbnail-img:nth-of-type(1)",{height:"80%",width:"200%",duration:1,ease:customEase})
         // .to(".loading-thumbnail-img:nth-of-type(2)",{height:"80%",width:"200%",duration:1,ease:customEase},.2)
-        .to("#video",{height:"82dvh",width:"100%",duration:.5,delay:.5,ease:customEase})
+        .to("#video",{height:"100dvh",width:"100%",duration:.5,delay:.5,ease:customEase})
         .to("#video-fake",{opacity:1,duration:0});
 
         gsap.fromTo(".tkk", {top: "36vw"},{top: "0vw",delay:.5,ease:customEase});
@@ -73,6 +69,8 @@ function Start(){
 
   document.getElementById('video').play();
   document.getElementById('video-fake').play();
+
+  playTopButton();
 }
 
 if(!window.matchMedia('(max-width: 450px)').matches){ 
