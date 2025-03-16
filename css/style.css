@@ -131,7 +131,7 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
 }
 #video{
     position: absolute;
-    height: 0%;
+    height:0dvh;
     width: 0%;
     top: 50%;
     left: 50%;
@@ -141,7 +141,7 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
 }
 #video-fake{
     position: absolute;
-    height: 82%;
+    height: 82dvh;
     width: 100%;
     top: 50%;
     left: 50%;
@@ -201,7 +201,7 @@ body{color: #fff;background-color: black;font-family: 'BebasNeue', sans-serif;ov
 .section__info-text{
     position: absolute;
     left:50%;
-    top: -30vh;
+    /* top: -30vh; */
     transform: translateX(-50%);
     width:calc(var(--index)*28);
     font-size:clamp(28px,var(--big_info-text),100px);

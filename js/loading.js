@@ -4,22 +4,31 @@ const main__title = document.querySelector(".main__title");
 const page1 = {trigger: ".main",start: "top top",end: "bottom top",scrub: true};
 
 window.onload = function () {
-    gsap.timeline()
-        .fromTo(".loading__div-progres", { x: "0%" }, { x: "-100%", duration: 1, ease: "power4.in" })
-        .to(".loading__block-progres", {  top: "calc(50% - calc(var(--index)*2))",right:"calc(var(--index)*-2.3)", duration: 0 })
-        .call(() => { document.querySelector(".loading__div-progres").textContent = "66%"; })
-        .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
-        .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" })
-        .to(".loading__block-progres", { top: "calc(100% - calc(var(--index)*4) - env(safe-area-inset-bottom))",right:"calc(var(--index)*-3.6)", duration: 0 })
-        .call(() => { document.querySelector(".loading__div-progres").textContent = "100%";})
-        .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
-        .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" })
-        .add(() => {
-            document.querySelectorAll('.ld_div-text').forEach((el, idx) => {
-                gsap.fromTo(el, { y: "-100%" }, { y: "0%", duration: 0.5,ease:customEase, delay: idx * 0.1 });
-            });
-            document.querySelector('.loading-text').style.pointerEvents = "auto";
+    document.documentElement.style.setProperty('--safe-area-bottom', 
+        (window.innerHeight - document.documentElement.clientHeight) + 'px'
+    );
+    const tl = gsap.timeline();
+
+    tl.fromTo(".loading__div-progres", { x: "0%" }, { x: "-100%", duration: 1, ease: "power4.in" })
+      .to(".loading__block-progres", { top: "calc(50% - calc(var(--index)*2))", right: "calc(var(--index)*-2.3)", duration: 0 })
+      .call(() => { document.querySelector(".loading__div-progres").textContent = "66%"; })
+      .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
+      .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" });
+    if (!window.matchMedia('(max-width: 450px)').matches) {
+      tl.to(".loading__block-progres", { top: "calc(100% - calc(var(--index)*4)", right: "calc(var(--index)*-3.6)", duration: 0 });
+    }
+    else{
+        tl.to(".loading__block-progres", { top: "calc(100% - calc(var(--index)*4) - var(--safe-area-bottom))", right: "calc(var(--index)*-3.6)", duration: 0 });
+    }
+    tl.call(() => { document.querySelector(".loading__div-progres").textContent = "100%"; })
+      .fromTo(".loading__div-progres", { x: "100%" }, { x: "0%", duration: 1, ease: "power4.out" })
+      .to(".loading__div-progres", { x: "-100%", duration: 1, ease: "power4.in" })
+      .add(() => {
+        document.querySelectorAll('.ld_div-text').forEach((el, idx) => {
+          gsap.fromTo(el, { y: "-100%" }, { y: "0%", duration: 0.5, ease: customEase, delay: idx * 0.1 });
         });
+        document.querySelector('.loading-text').style.pointerEvents = "auto";
+      });
         gsap.set(".loading__div-progres", { x: "0%" });
 };
 function Start(){
@@ -40,7 +49,7 @@ function Start(){
         gsap.timeline()
         // .to(".loading-thumbnail-img:nth-of-type(1)",{height:"80%",width:"100%",duration:.5,ease:customEase})
         // .to(".loading-thumbnail-img:nth-of-type(2)",{height:"80%",width:"100%",duration:.5,ease:customEase},.1)
-        .to("#video",{height:"82%",width:"100%",duration:.5,delay:.5,ease:customEase})
+        .to("#video",{height:"82dvh",width:"100%",duration:.5,delay:.5,ease:customEase})
         .to("#video-fake",{opacity:1,duration:0});
 
         gsap.fromTo(".main__title span", {top: "17vw"},{top: "0vw",stagger: 0.025,delay:.5,ease:customEase});
@@ -50,7 +59,7 @@ function Start(){
         gsap.timeline()
         // .to(".loading-thumbnail-img:nth-of-type(1)",{height:"80%",width:"200%",duration:1,ease:customEase})
         // .to(".loading-thumbnail-img:nth-of-type(2)",{height:"80%",width:"200%",duration:1,ease:customEase},.2)
-        .to("#video",{height:"82%",width:"100%",duration:.5,delay:.5,ease:customEase})
+        .to("#video",{height:"82dvh",width:"100%",duration:.5,delay:.5,ease:customEase})
         .to("#video-fake",{opacity:1,duration:0});
 
         gsap.fromTo(".tkk", {top: "36vw"},{top: "0vw",delay:.5,ease:customEase});
