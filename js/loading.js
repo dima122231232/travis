@@ -3,10 +3,10 @@ const main__title = document.querySelector(".main__title");
 
 const page1 = {trigger: ".main",start: "top top",end: "bottom top",scrub: true};
 
+document.documentElement.style.setProperty('--safe-area-bottom', 
+    (window.innerHeight - document.documentElement.clientHeight) + 'px'
+);
 window.onload = function () {
-    document.documentElement.style.setProperty('--safe-area-bottom', 
-        (window.innerHeight - document.documentElement.clientHeight) + 'px'
-    );
     const tl = gsap.timeline();
 
     tl.fromTo(".loading__div-progres", { x: "0%" }, { x: "-100%", duration: 1, ease: "power4.in" })
