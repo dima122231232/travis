@@ -146,7 +146,9 @@
     
         isFirstClick = !isFirstClick;
     }
-
+    // audio.addEventListener("ended", () => {
+    //     loadTrack(currentTrackIndex + 1);
+    // });
     function formatTime(seconds) {
         const min = Math.floor(seconds / 60);
         const sec = Math.floor(seconds % 60);
